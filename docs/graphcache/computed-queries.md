@@ -194,7 +194,7 @@ and `skip` respectively. This way we can use the keywords that are in our querie
 We may also add the `mergeMode` option, which defaults to `'after'` and can otherwise
 be set to `'before'`. This will handle in which order pages are merged when paginating.
 The default `after` mode assumes that pages that come in last should be merged
-_after_ the first pages. The `'before'` mode assumes that pages that come in last
+_after_ the first pages. The `before` mode assumes that pages that come in last
 should be merged _before_ the first pages, which can be helpful in a reverse
 endless scroller (E.g. Chat App).
 
@@ -240,8 +240,8 @@ const cache = cacheExchange({
 ```
 
 `relayPagination` accepts an object of options, for now we are offering one
-option and that is the `mergeMode`. This defaults to `inwards` and can otherwise
-be set to `outwards`. This will handle how pages are merged when we paginate
+option and that is the `mergeMode`. This defaults to `'inwards'` and can otherwise
+be set to `'outwards'`. This will handle how pages are merged when we paginate
 forwards and backwards at the same time. outwards pagination assumes that pages
 that come in last should be merged before the first pages, so that the list
 grows outwards in both directions. The default inwards pagination assumes that
